@@ -18,3 +18,18 @@ def get_letters(file):
             else:
                 letter_count[char] += 1
         return letter_count
+    
+def get_sort(a):
+    list_of_dict = []
+    none_alpha = []
+    for char, num in a.items():
+        if char.isalpha():
+            new_entry = {"char": char, "num": num}
+            list_of_dict.append(new_entry)
+    list_of_dict.sort(reverse=True, key=sort_by)
+        
+    return list_of_dict
+
+def sort_by(items):
+    return items["num"]
+
