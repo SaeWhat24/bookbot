@@ -12,14 +12,18 @@ def main():
     if len(sys.argv) < 2:
         print("Usage: python3 main.py <path_to_book>")
         sys.exit(1)
+    
     total_words = get_words(sys.argv[1])
     total_count = get_letters(sys.argv[1])
     list_dict = get_sort(total_count)
+
     print(f"============ BOOKBOT ============\n"
 f"Analyzing book found at {sys.argv[1]}...\n"
 "----------- Word Count ----------")
+    
     print(f"Found {total_words} total words")
     print("--------- Character Count -------")
+
 # looping to print list of chracters
     for i in list_dict:
         print(f"{i['char']}: {i['num']}")
