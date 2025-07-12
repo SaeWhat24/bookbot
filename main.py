@@ -10,7 +10,7 @@ from stats import get_sort
 def main():
     
     if len(sys.argv) < 2:
-        print("Usage: python3 main.py <path_to_book>")
+        print("Usage: must include python3 main.py <path_to_book>")
         sys.exit(1)
     
     total_words = get_words(sys.argv[1])
