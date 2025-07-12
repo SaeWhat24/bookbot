@@ -1,3 +1,9 @@
+def get_book_text(file):
+    with open(file) as f:
+        file_contents = f.read()
+    return file_contents
+
+
 def get_words(file):
     num_words = 0
     with open(file) as f:
@@ -6,6 +12,7 @@ def get_words(file):
         for word in words_split:
             num_words += 1
         return num_words
+
 
 def get_letters(file):
     letter_count = {}
@@ -18,10 +25,12 @@ def get_letters(file):
             else:
                 letter_count[char] += 1
         return letter_count
+
+def sort_by(items):
+    return items["num"]
     
 def get_sort(a):
     list_of_dict = []
-    none_alpha = []
     for char, num in a.items():
         if char.isalpha():
             new_entry = {"char": char, "num": num}
@@ -30,6 +39,4 @@ def get_sort(a):
         
     return list_of_dict
 
-def sort_by(items):
-    return items["num"]
 
